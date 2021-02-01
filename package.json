@@ -1,0 +1,14 @@
+{
+  "name": "ritsu.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "ritsu",
+  "license": "ISC",
+  "devDependencies": {
+    "react": "^17.0.1"
+  }
+}
