@@ -5,6 +5,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { Home } from "./components/Home/Home.jsx";
+import { Blog } from "./components/Blog/Blog.jsx";
 
 export default function App() {
   return (
@@ -16,9 +18,9 @@ export default function App() {
           <Route path="/">
             <Home />
           </Route>
-          <Route path="/aboutMe">
+          {/* <Route path="/aboutMe">
             <AboutMe />
-          </Route>
+          </Route> */}
           <Route path="/blog">
             <Blog />
           </Route>

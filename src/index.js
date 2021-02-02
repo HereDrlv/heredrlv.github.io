@@ -1,8 +1,12 @@
-import App from "./App.jsx";
-import {React, ReactDom} from "react";
-console.log("hello world");
+import React from "react";
+import ReactDOM from 'react-dom';
 
-ReactDom.render(
+import App from "./App.jsx";
+
+console.log("hello world");
+console.log(React);
+
+ReactDOM.render(
     <App />,
-    document.getElementById("root")
+    document.getElementById('root')
 );
