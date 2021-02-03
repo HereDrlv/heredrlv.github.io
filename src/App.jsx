@@ -1,20 +1,19 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
-import { Home } from "./components/Home/Home.jsx";
-import { Blog } from "./components/Blog/Blog.jsx";
-import { AboutMe } from "./components/AboutMe/AboutMe.jsx";
+import Home from "./components/Home/Home.jsx";
+import Blog from "./components/Blog/Blog.jsx";
+import AboutMe from "./components/AboutMe/AboutMe.jsx";
 
 import "./App.less";
 
-export class App extends React.Component {
+class App extends React.Component {
     render() {
         return (
-        <Router>
+        <Router basename="/">
             {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. 
                 也就是说和顺序有关，这不是完全匹配 */}
@@ -32,3 +31,5 @@ export class App extends React.Component {
         </Router>)
     }
 }
+
+export default App;
