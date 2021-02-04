@@ -28,6 +28,11 @@ module.exports = {
             },
         ]
     },
+    resolve: {
+        alias: {
+            Util: path.resolve(__dirname, 'src/util/'),
+        },
+    },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,

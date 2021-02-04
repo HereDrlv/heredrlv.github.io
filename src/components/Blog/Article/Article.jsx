@@ -3,14 +3,12 @@ import { Converter } from "showdown";
 import {
     useParams
 } from "react-router-dom";
+import {default as GET} from "Util/httpGetTextSync";
 
 function Article(props) {
     const converter = new Converter();
     let title = useParams().title;
-    let content = `# Lorem ipsum dolor 
-        ## sit amet consectetur 
-        - adipisicing elit. `;
-    console.log("props:",props);
+    let content = GET("/test.md");
     return (
         <div>
             <h1>{title}</h1>
