@@ -1,20 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Converter } from "showdown";
+import {
+    useParams
+} from "react-router-dom";
 
-const converter = new Converter();
-class Article extends Component {
-    render() {
-        return (
+function Article(props) {
+    const converter = new Converter();
+    let title = useParams().title;
+    let content = `# Lorem ipsum dolor 
+        ## sit amet consectetur 
+        - adipisicing elit. `;
+    console.log("props:",props);
+    return (
+        <div>
+            <h1>{title}</h1>
             <div>
-                <h1>{this.props.title}</h1>
-                <div>
-                    <p>{this.props.content}</p>
-                    <h2>converted:</h2>
-                    {converter.makeHtml(this.props.content)}
-                </div>
+                <p>{content}</p>
+                <h2>converted:</h2>
+                {converter.makeHtml(content)}
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 export default Article;

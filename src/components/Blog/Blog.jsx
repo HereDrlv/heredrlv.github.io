@@ -2,29 +2,21 @@ import React, { Component } from 'react';
 import {
     Switch,
     Route,
-    Link
+    Link,
 } from "react-router-dom";
 import Article from './Article/Article.jsx';
 import BlogHome from './BlogHome/BlogHome.jsx';
 
-// for test only
-const XHR = new XMLHttpRequest();
-XHR.open("GET","/test.md");
-// XHR.open("GET","/bundle.js");
-XHR.send();
-console.log(XHR);
-let content = XHR.responseText;
-// console.log(XHR);
 
 class Blog extends Component {
     render() {
         return (
             <div>
                 <Switch>
-                    <Route path="/blog/1">
-                        <Article title="testtest" content={content}/>
+                    <Route path="/blog/:title">
+                        <Article/>
                     </Route>
-                    <Route path="/">
+                    <Route path="/blog">
                         <Link to="/blog/1">to test article</Link>
                         <BlogHome />
                     </Route>
