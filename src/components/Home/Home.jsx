@@ -4,8 +4,7 @@ import {
 } from "react-router-dom";
 import "./Home.less";
 
-class Home extends React.Component {
-    render() {
+function Home(props) {
       return (
         <div className="Home">
           <h1>Ritsu Lyu</h1>
@@ -22,6 +21,5 @@ class Home extends React.Component {
           </ul>
         </div>
       );
-    }
 }
 export default Home;

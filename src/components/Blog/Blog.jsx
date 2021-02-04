@@ -8,22 +8,18 @@ import Article from './Article/Article.jsx';
 import BlogHome from './BlogHome/BlogHome.jsx';
 
 
-class Blog extends Component {
-    render() {
-        return (
-            <div>
-                <Switch>
-                    <Route path="/blog/:title">
-                        <Article/>
-                    </Route>
-                    <Route path="/blog">
-                        <Link to="/blog/1">to test article</Link>
-                        <BlogHome />
-                    </Route>
-                </Switch>
-            </div>
-        );
-    }
+function Blog(props) {
+    return (
+        <Switch>
+            <Route path="/blog/:title">
+                <Article/>
+            </Route>
+            <Route path="/blog">
+                <Link to="/blog/1">to test article</Link>
+                <BlogHome />
+            </Route>
+        </Switch>
+    );
 }
 
 export default Blog;

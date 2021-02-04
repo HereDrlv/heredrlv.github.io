@@ -10,9 +10,8 @@ import AboutMe from "./components/AboutMe/AboutMe.jsx";
 
 import "./App.less";
 
-class App extends React.Component {
-    render() {
-        return (
+function App(props) {
+    return (
         <Router basename="/">
             {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. 
@@ -28,8 +27,8 @@ class App extends React.Component {
                     <Home />
                 </Route>
             </Switch>
-        </Router>)
-    }
+        </Router>
+    );
 }
 
 export default App;
