@@ -10,9 +10,7 @@ import BlogHome from './BlogHome/BlogHome.jsx';
 
 
 function Blog(props) {
-    let { path, url } = useRouteMatch()
-    // console.log("path:", path);
-	// console.log("url:", url);
+    let { url } = useRouteMatch();
     return (
         <Switch>
             <Route path={`${url}/all`}>

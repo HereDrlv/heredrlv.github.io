@@ -10,7 +10,6 @@ import "./BlogHome.less";
 
 function BlogHome(props) {
     let { url } = useRouteMatch();
-	// console.log("url:", url);
 	return (
 		<Switch>
 			<Route path={`${url}/:dir`}>
