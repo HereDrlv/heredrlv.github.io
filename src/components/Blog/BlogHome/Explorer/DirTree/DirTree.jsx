@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Dirtree.less";
+import "./DirTree.less";
 
 function DirTree(props) {
     const dirs = props.directoires;
@@ -13,16 +13,12 @@ function DirTree(props) {
             </ul>
         );
     else
-        return (
-            <ul>
-                {Object.keys(dirs).map(
-                    (dir) => (<li>
+        return  Object.keys(dirs).map(
+                    (dir) => (<ul>
                         <p>{dir}</p>
                         <DirTree directoires={dirs[dir]} />
-                    </li>)
-                )}
-            </ul>
-        );
+                    </ul>)
+                )
 }
 
 export default DirTree;
