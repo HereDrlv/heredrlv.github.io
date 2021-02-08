@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
     Switch,
     Route,
-    Link,
-    useParams,
     useRouteMatch,
 } from "react-router-dom";
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';

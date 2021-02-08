@@ -2,20 +2,15 @@ import React from "react";
 import {
     Switch,
     Route,
-    Link,
-    useParams,
     useRouteMatch,
 } from "react-router-dom";
 import Explorer from "./Explorer/Explorer.jsx";
 import Content from "./Content/Content.jsx";
-import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
-
+import "./BlogHome.less";
 
 function BlogHome(props) {
     let { url } = useRouteMatch();
-	let { dir } = useParams();
 	// console.log("url:", url);
-	// console.log("dir:", dir);
 	return (
 		<Switch>
 			<Route path={`${url}/:dir`}>
