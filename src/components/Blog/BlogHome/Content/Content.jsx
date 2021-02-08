@@ -24,7 +24,7 @@ function Content(props) {
 		<div className="Content">
 			<h1>Content</h1>
 			{files.map((f) =>
-				<Preview title={f} />
+				<Preview key={f} title={f} />
 			)}
 		</div>
 	);
