@@ -12,20 +12,9 @@ import BlogHome from './BlogHome/BlogHome.jsx';
 
 
 function Blog(props) {
-    // Base: /blog
-    // TODO:
-    /* 
-        Rules:
-        -/<path>                         preview md under <path>
-        -/<path>/<file>                  content of file
-        E.g.:
-        -/                               preview all md
-        -/one/directory/                 preview all md under one directory
-        -/one/directory/article.test     content of one article 
-    */
     let { path, url } = useRouteMatch()
-    console.log("path:", path);
-	console.log("url:", url);
+    // console.log("path:", path);
+	// console.log("url:", url);
     return (
         <Switch>
             <Route path={`${url}/all`}>
