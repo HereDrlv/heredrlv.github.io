@@ -9,22 +9,19 @@ import { default as GET } from "Util/httpGetTextSync";
 import flattenJSON from "Util/flattenJSON";
 
 const index = JSON.parse(GET("/index.json"));
-
+const locateJSON = (keySeq, json, i = 0) => 
+	(i < keySeq.length - 1) ? 
+	locateJSON(keySeq, json[keySeq[i]], i + 1) : 
+	json[keySeq[i]];
 function Content(props) {
-	let { url } = useRouteMatch();
-	let path = url.split("/"); // -> ["", "blog", "all", "dir1", "dir2", "dir3"...]
-	let locateJSON = (i, keySeq, json) =>
-		(i < keySeq.length - 1) ?
-			locateJSON(i + 1, keySeq, json[keySeq[i]]) :
-			json[keySeq[i]];
-	let files = flattenJSON(locateJSON(3, path, index));
-	console.log(files);
-	// TODO: 获取summary。在这里获取，这里我尚可以利用url，一次性遍历path下所有md。否则的话preview又找不到path，
+	// useRouteMatch().url: ["", "blog", "all", "dir1", "dir2", "dir3"...]
+	let path = useRouteMatch().url.split("/").slice(3);
+	let files = path.length > 0 ? flattenJSON(locateJSON(path, index)) : flattenJSON(index);
+	// TODO: 获取summary。在这里获取，这里我尚可以利用url，一次性遍历path下所有md。否则的话preview又找不到path，// TODO: lazy load
 	return (
 		<div className="Content">
-			<h1>Content</h1>
 			{files.map((f) =>
-				<Preview key={f} title={f} />
+				<Preview key={f} title={f}/>
 			)}
 		</div>
 	);

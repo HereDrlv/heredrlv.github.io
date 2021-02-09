@@ -16,7 +16,7 @@ function Blog(props) {
             <Route path={`${url}/all`}>
                 <BlogHome />
             </Route>
-            <Route path={`${url}/:file`} >
+            <Route path={`${url}/:title`} >
                 <Article/>
             </Route>
             <Route path={`${url}`}>

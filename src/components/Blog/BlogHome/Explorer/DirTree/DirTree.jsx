@@ -3,7 +3,6 @@ import "./DirTree.less";
 
 function DirTree(props) {
     const dirs = props.directoires; // : JSON
-    // console.log(dirs);
     if (dirs instanceof Array)
         return (
             <ul>
@@ -12,12 +11,11 @@ function DirTree(props) {
                 )}
             </ul>
         );
-    else
-        return  Object.keys(dirs).map(
+    else return Object.keys(dirs).map(
                     (dir) => (
                         <ul key={dir}>
                             {dir}
-                            <DirTree directoires={dirs[dir]} />
+                            <DirTree className="DirTree" directoires={dirs[dir]} />
                         </ul>)
                 )
 }

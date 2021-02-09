@@ -5,24 +5,26 @@ import {
     useRouteMatch,
 } from "react-router-dom";
 import { default as GET } from "Util/httpGetTextSync";
+import "./Article.less"
 
 function Article(props) {
     const converter = new Converter();
-    let { path, url } = useRouteMatch();
-    console.log("path:", path);
-    console.log("url:", url);
+    // let { url } = useRouteMatch();
+    // console.log("url:", url);
     let title = useParams().title;
     let content = GET("/test.md");
+    // TODO: 查index.json, 获取URL, 然后GET markdown内容
     // let content = GET(title);
     return (
-        <div>
+        <article>
             <h1>{title}</h1>
-            <div>
+            <section>
                 <p>{content}</p>
-                <h2>converted:</h2>
+                <br/>
+                converted:
                 {converter.makeHtml(content)}
-            </div>
-        </div>
+            </section>
+        </article>
     );
 }
 

@@ -7,7 +7,7 @@ const index = JSON.parse(GET("/index.json"));
 function Explorer(props) {
     return (
         <div className="Explorer">
-            <DirTree directoires={index}/>
+            <DirTree className="DirTree" directoires={index}/>
         </div>
     );
 }
