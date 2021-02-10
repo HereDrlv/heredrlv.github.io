@@ -16,11 +16,8 @@ function BlogHome(props) {
 				<BlogHome/>
 			</Route>
 			<Route path={`${url}`}>
-				{/* <Link to={`${url}/1`}>to test directory</Link> */}
-				<br/>
-				{/* <Link to="/blog/filename">to test file</Link> */}
-				<div>
-					<h1>This is My Blog</h1>
+				<div className="BlogHome">
+					<br/><br/>
 					<Explorer />
 					<Content />
 				</div>

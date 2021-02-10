@@ -2,7 +2,7 @@ import React from 'react';
 import "./DirTree.less";
 
 const DirTree = (props) =>
-(<ul>
+(<ul className="DirTree">
     {props.directoires.map(
         (dir) => (
             dir.type == 'directory' ?
