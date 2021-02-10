@@ -5,7 +5,11 @@ import {
     useRouteMatch,
 } from "react-router-dom";
 import { default as GET } from "Util/httpGetTextSync";
+import ReactMarkdown from 'react-markdown'
 import "./Article.less"
+
+
+
 
 function Article(props) {
     const converter = new Converter();
@@ -22,7 +26,9 @@ function Article(props) {
                 <p>{content}</p>
                 <br/>
                 converted:
-                {converter.makeHtml(content)}
+                <ReactMarkdown>
+                    {content}
+                </ReactMarkdown>
             </section>
         </article>
     );
