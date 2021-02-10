@@ -1,6 +1,5 @@
 // return files[] json of specific directory.
 const locateJSON = function(dirSequence, json, i = 0) {
-    // console.log(json);
     for (let j of json)
         if (j['type'] == 'directory' && j['name'] == dirSequence[i]) 
             return (i == dirSequence.length - 1) ? 
