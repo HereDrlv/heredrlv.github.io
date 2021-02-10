@@ -7,7 +7,6 @@ import {
 import Home from "./components/Home/Home.jsx";
 import Blog from "./components/Blog/Blog.jsx";
 import AboutMe from "./components/AboutMe/AboutMe.jsx";
-import BlogHome from "./components/Blog/BlogHome/BlogHome.jsx"
 import "./App.less";
 
 function App(props) {
