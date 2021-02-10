@@ -1,0 +1,19 @@
+[
+  {"type":"directory","name":"all","contents":[
+    {"type":"directory","name":"all/Back-End","contents":[
+    ]},
+    {"type":"directory","name":"all/Front-End","contents":[
+      {"type":"directory","name":"all/Front-End/CSS","contents":[
+        {"type":"file","name":"all/Front-End/CSS/test1.md"}
+      ]},
+      {"type":"directory","name":"all/Front-End/JS","contents":[
+        {"type":"directory","name":"all/Front-End/JS/ES6","contents":[
+        ]},
+        {"type":"directory","name":"all/Front-End/JS/Prototype","contents":[
+          {"type":"file","name":"all/Front-End/JS/Prototype/test2.md"}
+        ]}
+      ]}
+    ]},
+    {"type":"file","name":"all/test.md"}
+  ]}
+]
