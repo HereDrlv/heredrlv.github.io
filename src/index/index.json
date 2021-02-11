@@ -1,0 +1,19 @@
+[
+  {"type":"directory","name":"all","contents":[
+    {"type":"directory","name":"Back-End","contents":[
+    ]},
+    {"type":"directory","name":"Front-End","contents":[
+      {"type":"directory","name":"CSS","contents":[
+        {"type":"file","name":"test1.md"}
+      ]},
+      {"type":"directory","name":"JS","contents":[
+        {"type":"directory","name":"ES6","contents":[
+        ]},
+        {"type":"directory","name":"Prototype","contents":[
+          {"type":"file","name":"test2.md"}
+        ]}
+      ]}
+    ]},
+    {"type":"file","name":"test.md"}
+  ]}
+]

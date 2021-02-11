@@ -17,6 +17,10 @@ module.exports = {
                 }
             },
             { 
+                test: /\.json$/,
+                loader: 'json-loader' 
+            },
+            { 
                 test: /\.less$/,
                 use: [{
                     loader: "style-loader" // creates style nodes from JS strings
@@ -31,6 +35,7 @@ module.exports = {
     resolve: {
         alias: {
             Util: path.resolve(__dirname, 'src/util/'),
+            Index: path.resolve(__dirname, 'src/index/'),
         },
     },
     devServer: {
