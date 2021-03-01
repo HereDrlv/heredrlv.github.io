@@ -1,19 +1,76 @@
 [
-  {"type":"directory","name":"all","contents":[
+  {"type":"directory","name":"./all","contents":[
     {"type":"directory","name":"Back-End","contents":[
     ]},
     {"type":"directory","name":"Front-End","contents":[
       {"type":"directory","name":"CSS","contents":[
-        {"type":"file","name":"test1.md"}
+        {"type":"directory","name":"CSS3","contents":[
+          {"type":"file","name":"CSS3新特性.md"}
+        ]},
+        {"type":"directory","name":"选择器","contents":[
+          {"type":"file","name":"伪类&amp;伪元素.md"},
+          {"type":"file","name":"选择器优先级.md"}
+        ]},
+        {"type":"directory","name":"基本模型","contents":[
+          {"type":"file","name":"BFC：Block_Formatting_Context.md"},
+          {"type":"file","name":"inline、block和inline-block.md"},
+          {"type":"file","name":"盒模型_和_margin塌陷.md"},
+          {"type":"file","name":"基本定位机制.md"}
+        ]}
       ]},
       {"type":"directory","name":"JS","contents":[
         {"type":"directory","name":"ES6","contents":[
+          {"type":"directory","name":"Promise","contents":[
+            {"type":"file","name":"Promise_doc.md"},
+            {"type":"file","name":"Promise入门介绍、基础使用_和练习题.md"}
+          ]}
         ]},
-        {"type":"directory","name":"Prototype","contents":[
-          {"type":"file","name":"test2.md"}
+        {"type":"directory","name":"TypeScript","contents":[
+          {"type":"file","name":"README.md"}
+        ]},
+        {"type":"directory","name":"函数","contents":[
+          {"type":"file","name":"Javascript 中的 this.md"},
+          {"type":"file","name":"闭包.md"},
+          {"type":"file","name":"函数（犀牛书读书笔记）.md"}
+        ]},
+        {"type":"directory","name":"对象","contents":[
+          {"type":"file","name":"Object-create().md"}
+        ]},
+        {"type":"directory","name":"数组","contents":[
+          {"type":"file","name":"数组的堆空间栈空间机制小探.md"}
+        ]},
+        {"type":"directory","name":"类和模块","contents":[
+          {"type":"file","name":"Export_&amp;_Import-JS_Module_Management.md"}
+        ]},
+        {"type":"directory","name":"浏览器中的Javascript","contents":[
+          {"type":"file","name":"并行模型与事件循环.md"}
+        ]},
+        {"type":"directory","name":"常见工程问题","contents":[
+          {"type":"file","name":"数组去重.md"},
+          {"type":"file","name":"防抖与节流.md"},
+          {"type":"file","name":"深拷贝、浅拷贝.md"}
+        ]},
+        {"type":"directory","name":"类型、值和变量","contents":[
+          {"type":"file","name":"Javascript中的传值和传引用.md"},
+          {"type":"file","name":"Symbol数据类型.md"},
+          {"type":"file","name":"typeof.md"},
+          {"type":"file","name":"undefined_和_null.md"},
+          {"type":"file","name":"数据类型.md"},
+          {"type":"file","name":"变量声明：var_let_const.md"},
+          {"type":"file","name":"继承与原型链.md"},
+          {"type":"file","name":"变量提升和函数提升.md"}
+        ]},
+        {"type":"directory","name":"表达式和运算符","contents":[
+          {"type":"file","name":"==和===.md"}
         ]}
+      ]},
+      {"type":"directory","name":"浏览器","contents":[
+        {"type":"file","name":"浏览器渲染-回流与重绘.md"},
+        {"type":"file","name":"浏览器结构.md"},
+        {"type":"file","name":"跨域：问题与解决.md"},
+        {"type":"file","name":"浏览器输入网址按下回车后发生了什么.md"}
       ]}
-    ]},
-    {"type":"file","name":"test.md"}
-  ]}
+    ]}
+  ]},
+  {"type":"report","directories":19,"files":33}
 ]
